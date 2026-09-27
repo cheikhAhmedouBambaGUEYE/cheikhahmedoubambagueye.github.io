@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO -->
+  <title>Cheikh Ahmedou Bamba Gueye — Consultant Environnement & Changement Climatique</title>
+  <meta name="description" content="Portfolio de Cheikh Ahmedou Bamba Gueye, consultant en environnement, changement climatique et gestion de projets. 4+ ans d'expérience en EIES, adaptation et résilience climatique en Afrique de l'Ouest." />
+  <meta property="og:title" content="Cheikh Ahmedou Bamba Gueye — Consultant Environnement & Climat" />
+  <meta property="og:description" content="EIES · Adaptation climatique · Gestion de projets · Afrique de l'Ouest & Maghreb" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>" />
+
+  <!-- Polices -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            paper: '#FAF8F3',
+            ink: '#1B1A17',
+            muted: '#6E695F',
+            line: '#E6E1D5',
+            pine: { DEFAULT: '#1E4D3A', dark: '#123528', soft: '#EEF2EC' },
+          },
+          fontFamily: {
+            serif: ['Fraunces', 'Georgia', 'serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html { scroll-padding-top: 5.5rem; }
+    body { -webkit-font-smoothing: antialiased; }
+    ::selection { background: #1E4D3A; color: #FAF8F3; }
+
+    /* Révélation au scroll — subtile */
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity .7s cubic-bezier(.22,.61,.36,1), transform .7s cubic-bezier(.22,.61,.36,1);
+      transition-delay: var(--d, 0ms);
+    }
+    .reveal.is-visible { opacity: 1; transform: none; }
+
+    /* Marquee — lent et discret */
+    .marquee { overflow: hidden; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+    .marquee-track { display: flex; width: max-content; animation: marquee 42s linear infinite; }
+    @keyframes marquee { to { transform: translateX(-50%); } }
+
+    /* Navigation active */
+    .nav-link { position: relative; transition: color .3s ease; }
+    .nav-link::after {
+      content: ''; position: absolute; left: 0; bottom: -4px;
+      width: 100%; height: 1px; background: currentColor;
+      transform: scaleX(0); transform-origin: left; transition: transform .3s ease;
+    }
+    .nav-link:hover::after, .nav-link[aria-current='true']::after { transform: scaleX(1); }
+
+    /* Focus visible accessible */
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid #1E4D3A; outline-offset: 3px; border-radius: 2px;
+    }
+
+    /* Respect des préférences de mouvement réduit */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .marquee-track { animation: none; }
+      * { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+  </style>
+</head>
+
+<body class="bg-paper text-ink font-sans text-[15px] md:text-base leading-relaxed">
+
+  <!-- Lien d'évitement (accessibilité) -->
+  <a href="#contenu" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60] focus:bg-pine focus:text-paper focus:px-4 focus:py-2 focus:rounded-md">
+    Aller au contenu principal
+  </a>
+
+  <!-- ══════════════ NAVIGATION ══════════════ -->
+  <header class="fixed top-0 inset-x-0 z-50 border-b border-line/80 bg-paper/85 backdrop-blur-md">
+    <nav aria-label="Navigation principale" class="mx-auto max-w-6xl px-5 md:px-8 h-16 flex items-center justify-between">
+      <a href="#accueil" class="font-serif text-lg tracking-tight">
+        CAB<span class="text-pine">.</span><span class="hidden sm:inline text-muted text-sm font-sans ml-2">Gueye</span>
+      </a>
+
+      <ul class="hidden md:flex items-center gap-7 text-sm text-muted">
+        <li><a class="nav-link" href="#apropos">À propos</a></li>
+        <li><a class="nav-link" href="#expertise">Expertise</a></li>
+        <li><a class="nav-link" href="#parcours">Parcours</a></li>
+        <li><a class="nav-link" href="#formation">Formation</a></li>
+        <li><a class="nav-link" href="#engagement">Engagement</a></li>
+        <li><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+
+      <a href="#contact" class="hidden md:inline-flex items-center gap-2 rounded-full bg-pine text-paper text-sm px-4 py-2 hover:bg-pine-dark transition-colors">
+        Discutons
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+      </a>
+
+      <!-- Bouton mobile -->
+      <button id="menu-btn" class="md:hidden p-2 -mr-2" aria-expanded="false" aria-controls="mobile-menu" aria-label="Ouvrir le menu">
+        <svg id="icon-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg id="icon-close" class="hidden" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </nav>
+
+    <!-- Menu mobile -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-line bg-paper px-5 py-4">
+      <ul class="flex flex-col gap-4 text-[15px]">
+        <li><a class="block py-1" href="#apropos">À propos</a></li>
+        <li><a class="block py-1" href="#expertise">Expertise</a></li>
+        <li><a class="block py-1" href="#parcours">Parcours</a></li>
+        <li><a class="block py-1" href="#formation">Formation</a></li>
+        <li><a class="block py-1" href="#engagement">Engagement</a></li>
+        <li><a class="block py-1 font-medium text-pine" href="#contact">Contact →</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="contenu">
+
+    <!-- ══════════════ HERO ══════════════ -->
+    <section id="accueil" class="relative pt-32 pb-16 md:pt-40 md:pb-24 overflow-hidden" aria-labelledby="hero-title">
+      <!-- Halo décoratif statique, très discret -->
+      <div aria-hidden="true" class="pointer-events-none absolute -top-40 -right-40 w-[34rem] h-[34rem] rounded-full bg-pine/5 blur-3xl"></div>
+
+      <div class="mx-auto max-w-6xl px-5 md:px-8">
+        <p class="reveal font-mono text-xs tracking-[0.3em] uppercase text-pine">Nouakchott, Mauritanie — Afrique de l'Ouest</p>
+
+        <h1 id="hero-title" class="reveal mt-6 font-serif text-[2.6rem] leading-[1.05] md:text-7xl md:leading-[1.02] tracking-tight max-w-4xl" style="--d:80ms">
+          Cheikh Ahmedou Bamba <span class="italic font-medium text-pine">Gueye</span>
+        </h1>
+
+        <p class="reveal mt-6 font-serif text-xl md:text-3xl text-ink/80 max-w-3xl" style="--d:160ms">
+          Consultant en environnement, changement climatique
+          <span class="text-muted">&amp; gestion de projets.</span>
+        </p>
+
+        <p class="reveal mt-6 max-w-2xl text-muted" style="--d:240ms">
+          Plus de quatre ans d'expérience en évaluation environnementale et sociale, adaptation
+          et résilience climatique — de la planification au suivi-évaluation de projets financés
+          par des bailleurs internationaux, en Afrique de l'Ouest et au Maghreb.
+        </p>
+
+        <div class="reveal mt-10 flex flex-wrap items-center gap-4" style="--d:320ms">
+          <a href="#parcours" class="inline-flex items-center gap-2 rounded-full bg-ink text-paper px-6 py-3 text-sm font-medium hover:bg-pine transition-colors">
+            Découvrir mon parcours
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14m0 0 6-6m-6 6-6-6"/></svg>
+          </a>
+          <a href="#contact" class="inline-flex items-center gap-2 rounded-full border border-line px-6 py-3 text-sm font-medium hover:border-pine hover:text-pine transition-colors">
+            Me contacter
+          </a>
+          <span class="inline-flex items-center gap-2 text-sm text-muted ml-1">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pine opacity-40"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-pine"></span>
+            </span>
+            Disponible pour missions &amp; consultations
+          </span>
+        </div>
+
+        <!-- Statistiques -->
+        <dl class="reveal mt-16 md:mt-20 grid grid-cols-2 md:grid-cols-4 gap-y-10 border-t border-line pt-10" style="--d:400ms">
+          <div>
+            <dd class="font-serif text-4xl md:text-5xl text-pine"><span data-count="4">0</span><span class="text-2xl align-top">+</span></dd>
+            <dt class="mt-2 text-sm text-muted">années d'expérience</dt>
+          </div>
+          <div>
+            <dd class="font-serif text-4xl md:text-5xl text-pine"><span data-count="15">0</span><span class="text-2xl align-top">+</span></dd>
+            <dt class="mt-2 text-sm text-muted">études EIES / NIES dirigées</dt>
+          </div>
+          <div>
+            <dd class="font-serif text-4xl md:text-5xl text-pine"><span data-count="50">0</span><span class="text-2xl align-top">+</span></dd>
+            <dt class="mt-2 text-sm text-muted">processus de coordination multipartite</dt>
+          </div>
+          <div>
+            <dd class="font-serif text-4xl md:text-5xl text-pine"><span data-count="10">0</span></dd>
+            <dt class="mt-2 text-sm text-muted">régions couvertes en Mauritanie</dt>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ══════════════ MARQUEE ══════════════ -->
+    <div class="marquee border-y border-line py-4" aria-hidden="true">
+      <div class="marquee-track font-serif italic text-lg text-muted/80 whitespace-nowrap">
+        <span class="flex shrink-0">
+          <span class="mx-6">EIES · NIES</span><span class="text-pine">✳</span>
+          <span class="mx-6">Adaptation climatique</span><span class="text-pine">✳</span>
+          <span class="mx-6">Résilience communautaire</span><span class="text-pine">✳</span>
+          <span class="mx-6">Gestion axée sur les résultats</span><span class="text-pine">✳</span>
+          <span class="mx-6">Safeguards Banque mondiale</span><span class="text-pine">✳</span>
+          <span class="mx-6">CCNUCC</span><span class="text-pine">✳</span>
+          <span class="mx-6">UICN</span><span class="text-pine">✳</span>
+          <span class="mx-6">SIG &amp; cartographie</span><span class="text-pine">✳</span>
+          <span class="mx-6">QHSE · ISO 9001 / 14001 / 45001</span><span class="text-pine">✳</span>
+        </span>
+        <span class="flex shrink-0">
+          <span class="mx-6">EIES · NIES</span><span class="text-pine">✳</span>
+          <span class="mx-6">Adaptation climatique</span><span class="text-pine">✳</span>
+          <span class="mx-6">Résilience communautaire</span><span class="text-pine">✳</span>
+          <span class="mx-6">Gestion axée sur les résultats</span><span class="text-pine">✳</span>
+          <span class="mx-6">Safeguards Banque mondiale</span><span class="text-pine">✳</span>
+          <span class="mx-6">CCNUCC</span><span class="text-pine">✳</span>
+          <span class="mx-6">UICN</span><span class="text-pine">✳</span>
+          <span class="mx-6">SIG &amp; cartographie</span><span class="text-pine">✳</span>
+          <span class="mx-6">QHSE · ISO 9001 / 14001 / 45001</span><span class="text-pine">✳</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- ══════════════ À PROPOS ══════════════ -->
+    <section id="apropos" class="py-20 md:py-28" aria-labelledby="apropos-title">
+      <div class="mx-auto max-w-6xl px-5 md:px-8">
+        <div class="reveal flex items-baseline gap-4">
+          <span class="font-mono text-xs tracking-[0.3em] text-pine">01</span>
+          <h2 id="apropos-title" class="font-serif text-3xl md:text-4xl tracking-tight">À propos</h2>
+          <span class="hidden sm:block flex-1 h-px bg-line self-center"></span>
+        </div>
+
+        <div class="mt-12 grid md:grid-cols-12 gap-10 md:gap-14">
+          <div class="md:col-span-7">
+            <p class="reveal font-serif text-xl md:text-2xl leading-relaxed text-ink/90">
+              J'accompagne les organisations publiques, privées et les bailleurs internationaux
+              dans la conduite d'projets conciliant <em class="text-pine">développement</em> et
+              <em class="text-pine">préservation des écosystèmes</em>.
+            </p>
+            <p class="reveal mt-6 text-muted leading-relaxed" style="--d:80ms">
+              Chef de mission de plus de 15 études environnementales et sociales (EIES, NIES),
+              je pilote l'ensemble du cycle opérationnel : planification, budgétisation, coordination
+              d'équipes pluridisciplinaires et dialogue avec les parties prenantes — ministères,
+              collectivités, communautés et partenaires techniques et financiers.
+            </p>
+            <p class="reveal mt-4 text-muted leading-relaxed" style="--d:140ms">
+              Mon terrain d'action s'étend du Sahel au Maghreb, avec une expérience avérée sur des
+              projets financés par la Banque mondiale, le FEM, FDD Meridiam et le Gouvernement de
+              Monaco. Actuellement en MBA en management de projets internationaux à Dakar.
+            </p>
+          </div>
+
+          <aside class="md:col-span-5">
+            <ul class="reveal divide-y divide-line border-y border-line text-sm" style="--d:120ms">
+              <li class="py-4 flex justify-between gap-4"><span class="text-muted">Poste actuel</span><span class="text-right font-medium">Consultant — FUTUR SARL</span></li>
+              <li class="py-4 flex justify-between gap-4"><span class="text-muted">Spécialisation</span><span class="text-right font-medium">Adaptation &amp; résilience climatique</span></li>
+              <li class="py-4 flex justify-between gap-4"><span class="text-muted">Équipes coordonnées</span><span class="text-right font-medium">jusqu'à 20 collaborateurs</span></li>
+              <li class="py-4 flex justify-between gap-4"><span class="text-muted">Affiliation</span><span class="text-right font-medium">Membre CMAP — UICN</span></li>
+              <li class="py-4 flex justify-between gap-4"><span class="text-muted">Formation en cours</span><span class="text-right font-medium">MBA Projets Internationaux — 2026</span></li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ EXPERTISE ══════════════ -->
+    <section id="expertise" class="py-20 md:py-28 bg-white/40 border-y border-line" aria-labelledby="expertise-title">
+      <div class="mx-auto max-w-6xl px-5 md:px-8">
+        <div class="reveal flex items-baseline gap-4">
+          <span class="font-mono text-xs tracking-[0.3em] text-pine">02</span>
+          <h2 id="expertise-title" class="font-serif text-3xl md:text-4xl tracking-tight">Champs d'expertise</h2>
+          <span class="hidden sm:block flex-1 h-px bg-line self-center"></span>
+        </div>
+
+        <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
+          <!-- Carte 1 -->
+          <article class="reveal group rounded-2xl border border-line bg-paper p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_-12px_rgba(30,77,58,0.25)] hover:border-pine/30">
+            <svg class="text-pine" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+            <h3 class="mt-5 font-serif text-lg">Évaluation environnementale &amp; sociale</h3>
+            <p class="mt-3 text-sm text-muted leading-relaxed">EIES, NIES, screening, études de référence, PGES et suivi environnemental sur le terrain.</p>
+          </article>
+          <!-- Carte 2 -->
+          <article class="reveal group rounded-2xl border border-line bg-paper p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_-12px_rgba(30,77,58,0.25)] hover:border-pine/30" style="--d:80ms">
+            <svg class="text-pine" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10zM2 12h20"/></svg>
+            <h3 class="mt-5 font-serif text-lg">Changement climatique</h3>
+            <p class="mt-3 text-sm text-muted leading-relaxed">Adaptation, atténuation, résilience communautaire et négociations climatiques (CCNUCC).</p>
+          </article>
+          <!-- Carte 3 -->
+          <article class="reveal group rounded-2xl border border-line bg-paper p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_-12px_rgba(30,77,58,0.25)] hover:border-pine/30" style="--d:160ms">
+            <svg class="text-pine" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4"/></svg>
+            <h3 class="mt-5 font-serif text-lg">Gestion de projet (GAR)</h3>
+            <p class="mt-3 text-sm text-muted leading-relaxed">Conception, planification, budgétisation et suivi-évaluation selon la gestion axée sur les résultats.</p>
+          </article>
+          <!-- Carte 4 -->
+          <article class="reveal group rounded-2xl border border-line bg-paper p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_-12px_rgba(30,77,58,0.25)] hover:border-pine/30" style="--d:240ms">
+            <svg class="text-pine" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <h3 class="mt-5 font-serif text-lg">Sauvegardes E&amp;S</h3>
+            <p class="mt-3 text-sm text-muted leading-relaxed">Cadre environnemental et social (CES) de la Banque mondiale, normes de performance.</p>
+          </article>
+          <!-- Carte 5 -->
+          <article class="reveal group rounded-2xl border border-line bg-paper p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_-12px_rgba(30,77,58,0.25)] hover:border-pine/30">
+            <svg class="text-pine" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <h3 class="mt-5 font-serif text-lg">Dialogue multi-acteurs</h3>
+            <p class="mt-3 text-sm text-muted leading-relaxed">Consultations publiques, coordination interinstitutionnelle : ministères, PTF, collectivités, société civile.</p>
+          </article>
+          <!-- Carte 6 -->
+          <article class="reveal group rounded-2xl border border-line bg-paper p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_-12px_rgba(30,77,58,0.25)] hover:border-pine/30" style="--d:80ms">
+            <svg class="text-pine" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 20l-5.5-2.5a1 1 0 0 1-.5-.87V5.4a1 1 0 0 1 1.4-.92L9 6.5m0 13.5V6.5m0 13.5 6-3m-6-11 6 3v7.5m0 0 4.6-2.13a1 1 0 0 0 .4-.86V5.4a1 1 0 0 0-1.4-.9L15 6.5"/></svg>
+            <h3 class="mt-5 font-serif text-lg">SIG &amp; cartographie</h3>
+            <p class="mt-3 text-sm text-muted leading-relaxed">ArcGIS Online, cartographie de zones prioritaires, analyse de données assistée par IA.</p>
+          </article>
+          <!-- Carte 7 -->
+          <article class="reveal group rounded-2xl border border-line bg-paper p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_-12px_rgba(30,77,58,0.25)] hover:border-pine/30" style="--d:160ms">
+            <svg class="text-pine" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg>
+            <h3 class="mt-5 font-serif text-lg">Management QHSE</h3>
+            <p class="mt-3 text-sm text-muted leading-relaxed">Systèmes de management certifiés : ISO 9001, ISO 14001 et ISO 45001.</p>
+          </article>
+          <!-- Carte 8 -->
+          <article class="reveal group rounded-2xl border border-line bg-paper p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_32px_-12px_rgba(30,77,58,0.25)] hover:border-pine/30" style="--d:240ms">
+            <svg class="text-pine" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            <h3 class="mt-5 font-serif text-lg">Communication stratégique</h3>
+            <p class="mt-3 text-sm text-muted leading-relaxed">Rapports techniques, notes analytiques et présentations institutionnelles.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ PARCOURS ══════════════ -->
+    <section id="parcours" class="py-20 md:py-28" aria-labelledby="parcours-title">
+      <div class="mx-auto max-w-6xl px-5 md:px-8">
+        <div class="reveal flex items-baseline gap-4">
+          <span class="font-mono text-xs tracking-[0.3em] text-pine">03</span>
+          <h2 id="parcours-title" class="font-serif text-3xl md:text-4xl tracking-tight">Expérience professionnelle</h2>
+          <span class="hidden sm:block flex-1 h-px bg-line self-center"></span>
+        </div>
+
+        <ol class="mt-14 space-y-14">
+          <!-- FUTUR SARL -->
+          <li class="reveal relative pl-8 md:pl-12 border-l border-line">
+            <span class="absolute -left-[5px] top-2 h-[9px] w-[9px] rounded-full bg-pine ring-4 ring-pine/15" aria-hidden="true"></span>
+            <p class="font-mono text-xs tracking-[0.2em] uppercase text-muted">Avril 2024 — Aujourd'hui · Nouakchott</p>
+            <h3 class="mt-3 font-serif text-2xl">Consultant en Environnement &amp; Développement durable</h3>
+            <p class="mt-1 text-sm text-pine font-medium">FUTUR SARL</p>
+            <ul class="mt-5 space-y-3 text-muted text-[15px] list-none">
+              <li class="flex gap-3"><span class="text-pine mt-[3px]">—</span>Chef de mission de 15+ études environnementales et sociales (EIES, NIES, études de référence, cartographie) dans 10 régions, avec 100&nbsp;% de conformité aux exigences clients et bailleurs.</li>
+              <li class="flex gap-3"><span class="text-pine mt-[3px]">—</span>Direction d'études pour la Banque mondiale : NIES des barrages du lot 3 (PADISAM, Brakna) et NIES de l'ANSADE (HISWACA SOP1).</li>
+              <li class="flex gap-3"><span class="text-pine mt-[3px]">—</span>EIES de la tannerie industrielle et de l'abattoir moderne de Toujounine (MPE) et du site d'or artisanal de Cheggar (MAADEN Mauritanie).</li>
+              <li class="flex gap-3"><span class="text-pine mt-[3px]">—</span>Cartographies des zones prioritaires et des produits financiers durables pour le PNGR — projet IMPADRA (FEM-7) ; étude de référence pour BORDA Mauritanie.</li>
+              <li class="flex gap-3"><span class="text-pine mt-[3px]">—</span>Plus de 50 processus de mobilisation des parties prenantes ; élaboration et suivi de PGES ; gestion d'une équipe pluridisciplinaire de 7 personnes.</li>
+            </ul>
+          </li>
+
+          <!-- ONG Naforé -->
+          <li class="reveal relative pl-8 md:pl-12 border-l border-line" style="--d:80ms">
+            <span class="absolute -left-[5px] top-2 h-[9px] w-[9px] rounded-full bg-pine ring-4 ring-pine/15" aria-hidden="true"></span>
+            <p class="font-mono text-xs tracking-[0.2em] uppercase text-muted">Oct. 2023 — Oct. 2025 · Nouakchott</p>
+            <h3 class="mt-3 font-serif text-2xl">Responsable Technique</h3>
+            <p class="mt-1 text-sm text-pine font-medium">ONG Naforé</p>
+            <ul class="mt-5 space-y-3 text-muted text-[15px] list-none">
+              <li class="flex gap-3"><span class="text-pine mt-[3px]">—</span>Planification et suivi-évaluation des programmes selon la GAR ; interface entre le bureau exécutif et 18 personnes de terrain.</li>
+              <li class="flex gap-3"><span class="text-pine mt-[3px]">—</span>Suivi des projets de résilience côtière à Keur Macène — programme WACA (Banque mondiale).</li>
+              <li class="flex gap-3"><span class="text-pine mt-[3px]">—</span>Conception et budgétisation de 2 projets de résilience communautaire financés (FDD Meridiam, Gouvernement de Monaco).</li>
+              <li class="flex gap-3"><span class="text-pine mt-[3px]">—</span>Représentation dans les cadres internationaux : Congrès mondial de la nature UICN (Abu Dhabi, 2025), Forum régional africain UICN (Nairobi, 2024), COP14 Convention d'Abidjan — animateur de side event (Nouakchott, 2025).</li>
+            </ul>
+          </li>
+
+          <!-- BAWA / Luqman -->
+          <li class="reveal relative pl-8 md:pl-12 border-l border-line" style="--d:120ms">
+            <span class="absolute -left-[5px] top-2 h-[9px] w-[9px] rounded-full bg-pine/60 ring-4 ring-pine/10" aria-hidden="true"></span>
+            <p class="font-mono text-xs tracking-[0.2em] uppercase text-muted">Mars 2023 — Oct. 2023 · Mauritanie</p>
+            <h3 class="mt-3 font-serif text-2xl">Chargé d'Études Environnementales et Sociales</h3>
+            <p class="mt-1 text-sm text-pine font-medium">Groupement BAWA / Luqman WA</p>
+            <ul class="mt-5 space-y-3 text-muted text-[15px] list-none">
+              <li class="flex gap-3"><span class="text-pine mt-[3px]">—</span>Sauvegardes environnementales et sociales du PRAPS 2 (Banque mondiale) : 42 parcs de vaccination, 80+ points d'eau, 10 abattoirs, 10 postes de santé, 6 marchés à bétail.</li>
+              <li class="flex gap-3"><span class="text-pine mt-[3px]">—</span>État de référence des milieux d'implantation, reporting technique et supervision de 2 enquêteurs.</li>
+            </ul>
+          </li>
+
+          <!-- DRE Oriental -->
+          <li class="reveal relative pl-8 md:pl-12 border-l border-line" style="--d:160ms">
+            <span class="absolute -left-[5px] top-2 h-[9px] w-[9px] rounded-full bg-pine/60 ring-4 ring-pine/10" aria-hidden="true"></span>
+            <p class="font-mono text-xs tracking-[0.2em] uppercase text-muted">Juil. 2022 — Nov. 2022 · Oujda, Maroc</p>
+            <h3 class="mt-3 font-serif text-2xl">Assistant en Évaluation Environnementale</h3>
+            <p class="mt-1 text-sm text-pine font-medium">Direction Régionale de l'Environnement — Région de l'Oriental <span class="text-muted font-normal">(stage de fin d'études, Master)</span></p>
+            <ul class="mt-5 space-y-3 text-muted text-[15px] list-none">
+              <li class="flex gap-3"><span class="text-pine mt-[3px]">—</span>Analyse d'évaluations d'impact en conformité avec la réglementation environnementale marocaine.</li>
+              <li class="flex gap-3"><span class="text-pine mt-[3px]">—</span>Mémoire de Master sur les impacts du projet de réhabilitation du Centre Oriental des Sciences et Technologies de l'Eau (COSTE).</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ══════════════ FORMATION & CERTIFICATIONS ══════════════ -->
+    <section id="formation" class="py-20 md:py-28 bg-white/40 border-y border-line" aria-labelledby="formation-title">
+      <div class="mx-auto max-w-6xl px-5 md:px-8">
+        <div class="reveal flex items-baseline gap-4">
+          <span class="font-mono text-xs tracking-[0.3em] text-pine">04</span>
+          <h2 id="formation-title" class="font-serif text-3xl md:text-4xl tracking-tight">Formation &amp; certifications</h2>
+          <span class="hidden sm:block flex-1 h-px bg-line self-center"></span>
+        </div>
+
+        <div class="mt-12 grid md:grid-cols-2 gap-12 md:gap-16">
+          <!-- Formation -->
+          <div>
+            <h3 class="reveal font-mono text-xs tracking-[0.25em] uppercase text-muted">Diplômes</h3>
+            <ul class="mt-6 space-y-8">
+              <li class="reveal">
+                <div class="flex justify-between items-baseline gap-4">
+                  <h4 class="font-serif text-lg">MBA — Management de Projets Internationaux</h4>
+                  <span class="shrink-0 font-mono text-xs text-pine">2026 · en cours</span>
+                </div>
+                <p class="mt-1 text-sm text-muted">Université Senghor de Dakar — Campus Sénégal</p>
+              </li>
+              <li class="reveal" style="--d:80ms">
+                <div class="flex justify-between items-baseline gap-4">
+                  <h4 class="font-serif text-lg">Master — Gestion du Changement Environnemental Méditerranéen &amp; Agriculture Durable</h4>
+                  <span class="shrink-0 font-mono text-xs text-pine">2022</span>
+                </div>
+                <p class="mt-1 text-sm text-muted">ISA Chott-Mariem, Université de Sousse, Tunisie</p>
+              </li>
+              <li class="reveal" style="--d:140ms">
+                <div class="flex justify-between items-baseline gap-4">
+                  <h4 class="font-serif text-lg">Licence professionnelle — Production et Protection des Végétaux</h4>
+                  <span class="shrink-0 font-mono text-xs text-pine">2017</span>
+                </div>
+                <p class="mt-1 text-sm text-muted">ISET Rosso, Mauritanie</p>
+              </li>
+            </ul>
+
+            <!-- Langues -->
+            <h3 class="reveal mt-14 font-mono text-xs tracking-[0.25em] uppercase text-muted">Langues</h3>
+            <ul class="reveal mt-6 space-y-4" style="--d:80ms">
+              <li>
+                <div class="flex justify-between text-sm"><span class="font-medium">Français</span><span class="text-muted">Excellent</span></div>
+                <div class="mt-2 h-[3px] rounded-full bg-line"><div class="h-full rounded-full bg-pine" style="width:100%"></div></div>
+              </li>
+              <li>
+                <div class="flex justify-between text-sm"><span class="font-medium">Wolof</span><span class="text-muted">Courant</span></div>
+                <div class="mt-2 h-[3px] rounded-full bg-line"><div class="h-full rounded-full bg-pine/80" style="width:85%"></div></div>
+              </li>
+              <li>
+                <div class="flex justify-between text-sm"><span class="font-medium">Anglais</span><span class="text-muted">Intermédiaire avancé</span></div>
+                <div class="mt-2 h-[3px] rounded-full bg-line"><div class="h-full rounded-full bg-pine/70" style="width:72%"></div></div>
+              </li>
+              <li>
+                <div class="flex justify-between text-sm"><span class="font-medium">Arabe</span><span class="text-muted">Intermédiaire</span></div>
+                <div class="mt-2 h-[3px] rounded-full bg-line"><div class="h-full rounded-full bg-pine/55" style="width:55%"></div></div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Certifications -->
+          <div>
+            <h3 class="reveal font-mono text-xs tracking-[0.25em] uppercase text-muted">Certifications &amp; formations complémentaires</h3>
+            <ul class="mt-6 divide-y divide-line border-y border-line">
+              <li class="reveal py-4 flex gap-4 items-start">
+                <svg class="mt-[3px] shrink-0 text-pine" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <div class="flex-1"><p class="text-[15px]">Engagement citoyen des jeunes pour la conservation des aires marines protégées</p><p class="text-xs text-muted mt-1">Cégep de la Gaspésie et des Îles, Canada · 2026</p></div>
+              </li>
+              <li class="reveal py-4 flex gap-4 items-start" style="--d:60ms">
+                <svg class="mt-[3px] shrink-0 text-pine" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <div class="flex-1"><p class="text-[15px]">Négociations climatiques pour la jeunesse africaine</p><p class="text-xs text-muted mt-1">IDEP — Commission économique pour l'Afrique · 2024</p></div>
+              </li>
+              <li class="reveal py-4 flex gap-4 items-start" style="--d:100ms">
+                <svg class="mt-[3px] shrink-0 text-pine" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <div class="flex-1"><p class="text-[15px]">De la science climatique à l'action</p><p class="text-xs text-muted mt-1">Groupe de la Banque mondiale, Coursera · 2024</p></div>
+              </li>
+              <li class="reveal py-4 flex gap-4 items-start" style="--d:140ms">
+                <svg class="mt-[3px] shrink-0 text-pine" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <div class="flex-1"><p class="text-[15px]">Système de management QHSE — ISO 9001, 14001, 45001</p><p class="text-xs text-muted mt-1">CEF Conseil, Tunis · 2022</p></div>
+              </li>
+              <li class="reveal py-4 flex gap-4 items-start" style="--d:180ms">
+                <svg class="mt-[3px] shrink-0 text-pine" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <div class="flex-1"><p class="text-[15px]">Analyse spatiale avec ArcGIS Online</p><p class="text-xs text-muted mt-1">Esri · en cours</p></div>
+              </li>
+              <li class="reveal py-4 flex gap-4 items-start" style="--d:220ms">
+                <svg class="mt-[3px] shrink-0 text-pine" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <div class="flex-1"><p class="text-[15px]">Santé et vitalité des zones humides en Afrique de l'Ouest</p><p class="text-xs text-muted mt-1">WWT Wetland Learning Hub / PRCM · 2025</p></div>
+              </li>
+              <li class="reveal py-4 flex gap-4 items-start" style="--d:260ms">
+                <svg class="mt-[3px] shrink-0 text-pine" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <div class="flex-1"><p class="text-[15px]">Dynamique et conservation des écosystèmes</p><p class="text-xs text-muted mt-1">American Museum of Natural History, Coursera · 2025</p></div>
+              </li>
+              <li class="reveal py-4 flex gap-4 items-start" style="--d:300ms">
+                <svg class="mt-[3px] shrink-0 text-pine" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <div class="flex-1"><p class="text-[15px]">Gestion de projet agile · Analyse de données avec l'IA</p><p class="text-xs text-muted mt-1">LinkedIn Learning · 2024</p></div>
+              </li>
+            </ul>
+
+            <!-- Affiliations -->
+            <h3 class="reveal mt-14 font-mono text-xs tracking-[0.25em] uppercase text-muted">Affiliations professionnelles</h3>
+            <ul class="reveal mt-6 space-y-3 text-[15px]" style="--d:80ms">
+              <li class="flex gap-3"><span class="text-pine">✳</span>Membre de la Commission mondiale des aires protégées (CMAP) — UICN</li>
+              <li class="flex gap-3"><span class="text-pine">✳</span>Membre et volontaire de l'Association Naforé</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ ENGAGEMENT ══════════════ -->
+    <section id="engagement" class="py-20 md:py-28" aria-labelledby="engagement-title">
+      <div class="mx-auto max-w-6xl px-5 md:px-8">
+        <div class="reveal flex items-baseline gap-4">
+          <span class="font-mono text-xs tracking-[0.3em] text-pine">05</span>
+          <h2 id="engagement-title" class="font-serif text-3xl md:text-4xl tracking-tight">Engagement &amp; leadership</h2>
+          <span class="hidden sm:block flex-1 h-px bg-line self-center"></span>
+        </div>
+
+        <div class="mt-12 grid sm:grid-cols-2 gap-4 md:gap-5">
+          <article class="reveal rounded-2xl bg-pine text-paper p-7 md:p-9 sm:col-span-2">
+            <p class="font-mono text-xs tracking-[0.2em] uppercase text-paper/60">Initiateur · 2025</p>
+            <h3 class="mt-4 font-serif text-2xl md:text-3xl">Sensibilisation des jeunes aux enjeux climatiques</h3>
+            <p class="mt-4 text-paper/80 leading-relaxed max-w-3xl">
+              Plantation de plus de <strong class="font-serif text-xl text-paper">50 arbres</strong> avec
+              environ <strong class="font-serif text-xl text-paper">70 jeunes</strong> dans des espaces scolaires
+              et universitaires de Nouakchott, en partenariat avec CARMEUSE Mauritanie et les clubs
+              de l'Université de Nouakchott.
+            </p>
+          </article>
+
+          <article class="reveal rounded-2xl border border-line p-7" style="--d:80ms">
+            <p class="font-mono text-xs tracking-[0.2em] uppercase text-muted">Volontariat · 2023</p>
+            <h3 class="mt-3 font-serif text-xl">Projet TREEMAC — Cap-Vert</h3>
+            <p class="mt-3 text-sm text-muted leading-relaxed">Contribution à une initiative de conservation des écosystèmes côtiers et de reboisement.</p>
+          </article>
+
+          <article class="reveal rounded-2xl border border-line p-7" style="--d:140ms">
+            <p class="font-mono text-xs tracking-[0.2em] uppercase text-muted">Volontariat · IMACP6</p>
+            <h3 class="mt-3 font-serif text-xl">Congrès international des aires marines protégées</h3>
+            <p class="mt-3 text-sm text-muted leading-relaxed">Bénévole au sein du plus grand rassemblement mondial dédié à la protection des océans.</p>
+          </article>
+
+          <article class="reveal rounded-2xl border border-line p-7 sm:col-span-2" style="--d:200ms">
+            <p class="font-mono text-xs tracking-[0.2em] uppercase text-muted">Action solidaire · 2026</p>
+            <h3 class="mt-3 font-serif text-xl">Distribution de kits alimentaires — Dakar, Parcelles Assainies</h3>
+            <p class="mt-3 text-sm text-muted leading-relaxed">Coordination d'une action solidaire avec 14 jeunes volontaires au profit des familles du quartier.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ CONTACT ══════════════ -->
+    <section id="contact" class="py-24 md:py-36 border-t border-line bg-pine-soft/60" aria-labelledby="contact-title">
+      <div class="mx-auto max-w-6xl px-5 md:px-8 text-center">
+        <div class="reveal flex items-baseline gap-4 justify-center md:justify-start">
+          <span class="font-mono text-xs tracking-[0.3em] text-pine">06</span>
+          <h2 id="contact-title" class="font-serif text-3xl md:text-4xl tracking-tight">Contact</h2>
+        </div>
+
+        <h3 class="reveal mt-10 font-serif text-4xl md:text-6xl tracking-tight" style="--d:80ms">
+          Travaillons <span class="italic text-pine">ensemble.</span>
+        </h3>
+        <p class="reveal mt-6 text-muted max-w-xl mx-auto" style="--d:160ms">
+          Un projet d'étude environnementale, un programme d'adaptation climatique ou un besoin
+          d'expertise en gestion de projets ? Écrivez-moi — je réponds rapidement.
+        </p>
+
+        <div class="reveal mt-10" style="--d:240ms">
+          <a href="mailto:medbenyhy12@outlook.com" class="inline-flex items-center gap-3 rounded-full bg-ink text-paper px-8 py-4 text-base font-medium hover:bg-pine transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+            medbenyhy12@outlook.com
+          </a>
+        </div>
+
+        <div class="reveal mt-8 flex flex-wrap justify-center gap-3 text-sm" style="--d:320ms">
+          <a href="tel:+221785264730" class="inline-flex items-center gap-2 rounded-full border border-line bg-paper px-5 py-2.5 hover:border-pine hover:text-pine transition-colors" aria-label="Appeler le +221 78 526 47 30">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Sénégal · +221 78 526 47 30
+          </a>
+          <a href="https://wa.me/22244199874" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border border-line bg-paper px-5 py-2.5 hover:border-pine hover:text-pine transition-colors" aria-label="Discuter sur WhatsApp au +222 44 19 98 74">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+            WhatsApp · +222 44 19 98 74
+          </a>
+          <span class="inline-flex items-center gap-2 rounded-full border border-line bg-paper px-5 py-2.5 text-muted">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            Nouakchott, Mauritanie
+          </span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════════ FOOTER ══════════════ -->
+  <footer class="border-t border-line py-8">
+    <div class="mx-auto max-w-6xl px-5 md:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted">
+      <p>© <span id="year">2026</span> Cheikh Ahmedou Bamba Gueye — Consultant Environnement &amp; Climat</p>
+      <a href="#accueil" class="inline-flex items-center gap-2 hover:text-pine transition-colors">
+        Retour en haut
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5m0 0-6 6m6-6 6 6"/></svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- ══════════════ SCRIPT ══════════════ -->
+  <script>
+    // Année dynamique
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Menu mobile
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('icon-open');
+    const iconClose = document.getElementById('icon-close');
+    menuBtn.addEventListener('click', () => {
+      const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', String(!expanded));
+      menuBtn.setAttribute('aria-label', expanded ? 'Ouvrir le menu' : 'Fermer le menu');
+      mobileMenu.classList.toggle('hidden');
+      iconOpen.classList.toggle('hidden');
+      iconClose.classList.toggle('hidden');
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }));
+
+    // Révélation au scroll (IntersectionObserver)
+    const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const revealEls = document.querySelectorAll('.reveal');
+    if (prefersReduced || !('IntersectionObserver' in window)) {
+      revealEls.forEach(el => el.classList.add('is-visible'));
+    } else {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-visible');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      revealEls.forEach(el => io.observe(el));
+    }
+
+    // Compteurs animés
+    const easeOutCubic = t => 1 - Math.pow(1 - t, 3);
+    function animateCounter(el) {
+      const target = parseInt(el.dataset.count, 10);
+      const duration = 1400;
+      const start = performance.now();
+      function tick(now) {
+        const p = Math.min((now - start) / duration, 1);
+        el.textContent = Math.round(easeOutCubic(p) * target);
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    }
+    const counters = document.querySelectorAll('[data-count]');
+    if (prefersReduced || !('IntersectionObserver' in window)) {
+      counters.forEach(el => el.textContent = el.dataset.count);
+    } else {
+      const cio = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            animateCounter(e.target);
+            cio.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.6 });
+      counters.forEach(el => cio.observe(el));
+    }
+
+    // Scroll-spy : lien actif dans la navigation
+    const navLinks = document.querySelectorAll('header nav ul a.nav-link');
+    const sections = [...navLinks].map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+    if ('IntersectionObserver' in window && sections.length) {
+      const sio = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            navLinks.forEach(a => a.removeAttribute('aria-current'));
+            const active = document.querySelector(`header nav ul a[href="#${e.target.id}"]`);
+            if (active) active.setAttribute('aria-current', 'true');
+          }
+        });
+      }, { rootMargin: '-40% 0px -55% 0px' });
+      sections.forEach(s => sio.observe(s));
+    }
+  </script>
+</body>
+</html>
